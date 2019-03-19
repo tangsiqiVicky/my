@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+    <title>Document</title>
+</head>
+<body>
+    <a href="b.html?src=www.baidu.com">ddd</a>
+    <script>
+        function after (times,callback){
+           
+            
+            console.log(times)
+            return function(){
+                times--
+                if(times == 0){
+                    // console.log(5)
+                    callback();
+
+                }else{
+                    // fn()
+                }
+            }
+        }
+        let fn = after(3,function(){
+                console.log("执行了3次方法")
+            }
+        )
+        fn()
+        fn()
+        fn()
+        
+    </script>
+</body>
+</html>
